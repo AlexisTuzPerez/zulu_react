@@ -1,0 +1,409 @@
+
+
+/* Componentes Generales */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  margin: 0px;
+}
+
+
+
+
+.header{
+
+  background-color: white;
+
+  height: 10vh;
+
+
+
+  display: flex;
+  flex-direction:  row;
+  align-items: center;
+
+
+
+
+
+  border-bottom: 1px solid black;
+
+  gap: 20px;
+
+
+
+}
+
+.IconAndText{
+  color: black;
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+
+  height: 35px;
+  width: auto;
+  padding: 0px 10px 0px 10px;
+
+  transition: all 0.2s ease-in-out;
+
+
+
+
+
+
+}
+
+
+.IconAndText:hover{
+
+  color: white;
+
+
+  background-color: black;
+
+  border-radius: 5px;
+
+
+
+}
+
+
+.mainBox{
+
+    
+  background-color: rgba(243, 243, 243, 0.939);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content:flex-start;
+  align-items: center;
+
+  width: 100vw;
+
+  height: 90vh;
+  overflow-y: auto;
+
+
+
+
+
+}
+
+
+
+
+.footer{
+
+  gap: 10px;
+
+  color: black;
+  background-color: white;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid black;
+
+
+  position: relative;
+  width: 100%;
+
+
+
+
+
+
+
+
+}
+
+
+/* Componentes Más Chiquitos Generales  */
+
+
+.button {
+
+  font-weight: bold;
+  display: inline-block;
+
+
+  padding: 10px ;
+  background-color: white;
+  color: black;
+
+  border: 1.5px solid  black;
+  border-radius: 4px;
+
+  margin: 20px;
+
+
+
+  width: 150px;
+  height: 50px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+.button:hover {
+
+  color: white;
+
+
+
+  background-color: #222;
+
+}
+
+
+
+
+/* Componentes Products  */
+
+
+table {
+  width: 80vw;
+
+
+  border-collapse: collapse; 
+
+/*   overflow-x: auto; */
+
+
+  
+}
+
+th {
+ 
+
+  padding: 20px; 
+  text-align: left; 
+}
+
+
+
+td{
+  border-top: 1px solid black;
+
+
+  padding: 20px; 
+  text-align: left; 
+}
+
+
+
+
+
+
+
+
+
+/* CRUD Button */
+
+
+.crudButton{
+
+  color: black;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  width: 35px;
+  height: 35px;
+
+  border: 1.5px solid black;
+
+  transition: all 0.2s ease-in-out;
+
+  border-radius: 4px;
+
+
+}
+
+
+.crudButton:hover{
+
+  color: white;
+
+  background-color: black;
+
+
+
+
+}
+
+
+.addButton{
+  background-color: rgb(126, 231, 151);
+
+
+}
+
+
+.deleteButton{
+  background-color: rgb(244, 127, 127);
+}
+
+
+.editButton{
+  background-color: rgb(127, 228, 244);
+}
+
+.saveButton{
+
+/* 
+  position: absolute;
+
+  bottom: 5vh; */
+
+  background-color: rgb(121, 195, 255);
+  width: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modal */
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+
+
+.modal-content {
+
+  position: relative;
+  background-color: white;
+  padding: 20px; 
+  border-radius: 8px;
+
+
+  width: 80vw; 
+
+  height: 80vh;
+
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  animation: fadeIn 0.3s ease; 
+
+  overflow-y: auto;
+
+
+}
+
+.closeButton{
+  
+  position: absolute;
+
+  color: black;
+
+  background-color:  rgb(244, 127, 127);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+
+
+/* Optional Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+.modalMessage{
+  
+}
+
+
+
+
+
+/* Forms  */
+
+
+
+.form{
+
+  font-size: 25px;
+
+
+  gap: 15px;
+
+
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.input{
+  width: 250px;
+  height: 30px;
+
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+
+
