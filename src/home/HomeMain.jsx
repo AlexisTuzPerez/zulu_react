@@ -14,7 +14,7 @@ function HomeMain() {
 
             <LinkButton  text={"Stores"}   link={"/"} />
 
-            <LinkButton  text={"Product-Stock"}   link={"/"} />
+            <LinkButton  text={"Stock"}   link={"/"} />
             <LinkButton  text={"Sales"}   link={"/"} />
 
 

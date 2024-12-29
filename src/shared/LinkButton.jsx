@@ -12,8 +12,8 @@ function LinkButton({text,link}) {
     return (
 
 
-        <Link to={link}>
-        <button className='button'>{text}</button>
+        <Link to={link} style={{ textDecoration: 'none', color: 'inherit'}}>
+        <button className='button' >{text}</button>
         </Link>
 
     )
