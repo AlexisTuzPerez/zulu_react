@@ -26,7 +26,7 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
 
 
 
-
+    //no se usa 
     const [isChanged, setChanged] = useState({
         
         nombre: false,
@@ -51,11 +51,11 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
             [name]: name == "precio" ? parseFloat(value) || 0: value
             
         }))
-        setChanged( (prevChanges) => ({
+/*         setChanged( (prevChanges) => ({
             ...prevChanges,
             [name]:  value !== formData[name]
         }))
-
+ */
 
 
 
@@ -71,22 +71,8 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
             try {
 
                 const result = await postProduct(formData);
-
-
-
-
-
-                setFormData(nullProduct)
-
                 loadProducts()
-
                 setModalOpen(false)
-
-
-
-
-
-
 
 
                 
@@ -102,17 +88,8 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
                 const result = await putProduct(formData,product.id);
 
 
-
-
-             
-
                 loadProducts()
-
-
                 setModalOpen(false)
-
-
-
 
 
 
