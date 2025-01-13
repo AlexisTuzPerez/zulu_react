@@ -6,6 +6,8 @@ import getStocks from "../services/StockFetch";
 import StockForm from "./StockForm";
 
 import AddButton from "../shared/AddButton";
+import EditButton from "../shared/EditButton";
+
 
 function StockTable() {
 
@@ -35,10 +37,10 @@ function StockTable() {
 
 
 
-    const formComponentFunction = (typeForm, stock, loadProducts, setModalOpen) =>  <StockForm 
+    const formComponentFunction = (typeForm, stock, loadStock, setModalOpen) =>  <StockForm 
     typeForm={typeForm}
-    client={stock} 
-    loadProducts={loadProducts} 
+    stock={stock} 
+    loadStock={loadStock} 
     setModalOpen={setModalOpen} />
 
 
@@ -75,7 +77,20 @@ function StockTable() {
                         <td>{stock.productoId}</td>
                         <td>{stock.almacenId}</td>
                         <td>{stock.cantidad}</td>
-                        <td>  Edit Delete</td>
+
+
+
+                        <td style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+
+                            
+
+                            <EditButton       formComponent={formComponentFunction} loadProducts={loadStock}  product={stock}  />
+                                
+
+
+
+                        </td>
+
                     
                     </tr> 
                 ))}
