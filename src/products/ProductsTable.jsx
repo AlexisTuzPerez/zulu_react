@@ -12,7 +12,7 @@ import EditButton from "../shared/EditButton";
 import ProductForm from "./ProductForm";
 
 
-function ProductsTable({ }) {
+function ProductsTable() {
 
 
 
@@ -56,7 +56,9 @@ function ProductsTable({ }) {
         typeForm={typeForm} 
         product={product} 
         loadProducts={loadProducts} 
-        setModalOpen={setModalOpen} />
+        setModalOpen={setModalOpen} 
+        
+    />
                                                                                     
    
 
@@ -65,8 +67,9 @@ function ProductsTable({ }) {
         try {
     
             const response = await deleteProduct(id);
+            console.log(response)
             
-                loadProducts()
+            loadProducts()
     
         } catch (error) {
             console.error("Error", error);

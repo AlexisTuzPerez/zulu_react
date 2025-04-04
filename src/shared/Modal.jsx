@@ -30,14 +30,6 @@ function Modal ({ setModalOpen, children}) {
 
 
 
-
-
-        
-
-
-
-
-
                 </div>
             </div>
         </>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { useState } from "react";
 import { postProduct, putProduct } from "../services/ProductFetch";
@@ -27,7 +28,7 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
 
 
     //no se usa 
-    const [isChanged, setChanged] = useState({
+  /*   const [isChanged, setChanged] = useState({
         
         nombre: false,
         autor: false,
@@ -35,7 +36,7 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
         fecha_lanzamiento: false,
         precio: false
 
-    })
+    }) */
 
 
 
@@ -73,7 +74,7 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
                 const result = await postProduct(formData);
                 loadProducts()
                 setModalOpen(false)
-
+                console.log(result)
 
                 
             } catch (error) {
@@ -91,6 +92,7 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
                 loadProducts()
                 setModalOpen(false)
 
+                console.log(result)
 
 
 
@@ -125,8 +127,9 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
     
 
 
-    const isFormValid = Object.values(formData).every((value) => value !== "" /* &&
-                        Object.values(isChanged).every((value) => value === true) */)
+
+    /* this is not necessary, the atribute required helps */
+    const isFormValid = Object.values(formData).every((value) => value !== "" )
 
 
 
@@ -155,6 +158,12 @@ function ProductForm({typeForm,product,loadProducts,setModalOpen}) {
                 value={formData.nombre}
                 onChange={handleInput}
                 style={getInputStyle("nombre")}
+
+
+                /* place holder is the text within, the requeire avoid saving when null */
+
+                placeholder="Teclea tu nombre"
+                required
 
             />
 

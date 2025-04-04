@@ -14,5 +14,4 @@ export const getStocks = async () => {
 
 }   
 
-
 export default getStocks
