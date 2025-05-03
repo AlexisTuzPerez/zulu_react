@@ -1,10 +1,11 @@
-import React from "react";
 
-import { faCompactDisc, faHouse, faLayerGroup, faMoneyCheckDollar, faStore, faUser } from '@fortawesome/free-solid-svg-icons';
+
+import { faCompactDisc, faHouse, faLayerGroup, faStore, faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 import IconAndTextLink from "./IconAndTextLink";
 
+// eslint-disable-next-line react/prop-types
 function Header({title}) {
     return (
 
@@ -20,11 +21,9 @@ function Header({title}) {
                 <nav style={{display: "flex", gap: "10px", flexDirection: "row"}}>
                     <IconAndTextLink icon={faUser} text={"Clients"} link={"/clients"} />
                     <IconAndTextLink icon={faCompactDisc} text={"Products"} link={"/products"} />
-                    <IconAndTextLink icon={faStore} text={"Stores"} link={"/"} />
+                    <IconAndTextLink icon={faStore} text={"Warehouse"} link={"/warehouse"} />
                     <IconAndTextLink icon={faLayerGroup} text={"Stock"} link={"/"} />
-                    <IconAndTextLink icon={faMoneyCheckDollar} text={"Sale"} link={"/"} />
-
-
+                    {/* <IconAndTextLink icon={faMoneyCheckDollar} text={"Sale"} link={"/"} /> */}
 
 
                 </nav>

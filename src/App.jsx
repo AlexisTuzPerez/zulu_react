@@ -1,15 +1,13 @@
-import React from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home/Home';
 import Client from './clients/Client';
+import Home from './home/Home.jsx';
+
+import Stock from './stock/Stock';
 
 import Product from './products/Product';
 import './styles.css';
-
-
-
-
-
+import Warehouse from './warehouse/Warehouse.jsx';
 
 
 function App() {
@@ -20,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/clients" element={<Client />} />
         <Route path="/products" element={<Product />} />
+        <Route path="/stock" element={<Stock />} />
+        <Route path="/warehouse" element={<Warehouse />} />
 
       </Routes>
     </BrowserRouter>

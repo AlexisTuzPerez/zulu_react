@@ -3,8 +3,8 @@
 
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from "prop-types";
 import { useState } from 'react';
-
 import Modal from './Modal';
 
 
@@ -27,15 +27,17 @@ function AddButton({formComponent, loadProducts}) {
                 
                 
                 </Modal>
-
-
-
             
             )}
 
         </>
 
     )
+}
+
+AddButton.propTypes ={
+    formComponent: PropTypes.func.isRequired,
+    loadProducts: PropTypes.func.isRequired
 }
 
 
